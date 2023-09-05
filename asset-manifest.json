@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-hooks-practice/static/css/main.e6c13ad2.css",
+    "main.js": "/react-hooks-practice/static/js/main.62d4e02c.js",
+    "index.html": "/react-hooks-practice/index.html",
+    "main.e6c13ad2.css.map": "/react-hooks-practice/static/css/main.e6c13ad2.css.map",
+    "main.62d4e02c.js.map": "/react-hooks-practice/static/js/main.62d4e02c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.62d4e02c.js"
+  ]
+}
