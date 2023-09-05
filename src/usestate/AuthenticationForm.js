@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button, TextInput } from 'flowbite-react'
 
 export default function AuthenticationForm() {
 
@@ -22,19 +23,20 @@ export default function AuthenticationForm() {
     return (
         <>
             {isLoggedIn ? (
-                <div>
-                    <h4>Hello {userName}</h4>
-                    <button onClick={handleLogOut}>Logout</button>
+                <div className='h-[100px]'>
+                    <h3 className='mb-2 text-xl mt-2 pb-2'>Hello {userName}</h3>
+                    <Button onClick={handleLogOut}>Logout</Button>
                 </div>
             ) : ( 
-                <div>
-                    <input 
+                <div className='h-[100px]'>
+                    <TextInput 
                         type='text'
                         value={userName}
                         placeholder={'Your name here'}
                         onChange={(event) => setUserName(event.target.value)}
+                        className='mb-3'
                     />
-                    <button onClick={handleLogin}>Log In</button>
+                    <Button onClick={handleLogin}>Log In</Button>
                 </div>
             )}
         </>

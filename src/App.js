@@ -1,22 +1,22 @@
-import React from "react"
-import Counter from "./Counter"
-import ToggleMessage from "./ToggleMessage"
-import TextInput from "./TextInput"
-import ItemList from "./ItemList"
-import AuthenticationForm from "./AuthenticationForm"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes
+
+import SideBar from './components/SideBar';
+import UseState from './components/UseState';
+import UseEffect from './UseEffect';
 
 function App() {
   return (
-    <>
-     {/* useState */}
-      <Counter />  
-      <ToggleMessage />
-      <TextInput />
-      <ItemList />
-      <AuthenticationForm />
-      {/* useEffect */}
-    </>
+    <Router>
+      <div className='flex'>
+        <SideBar />
+        <Routes> 
+          <Route path='/useState' element={<UseState />} />
+          <Route path='/useEffect' element={<UseEffect />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App
+export default App;

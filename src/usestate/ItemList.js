@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { Button, TextInput } from 'flowbite-react'
 
 export default function ItemList() {
 
@@ -43,13 +44,14 @@ export default function ItemList() {
 
     return (
         <>
-            <h4>Items:</h4>
-            <input type='text' value={currentItem} onChange={handleOnChange}/>
-            <button onClick={addItem}>Add Item</button>
+            
+            <TextInput className='mb-2' type='text' placeholder='Add items' value={currentItem} onChange={handleOnChange}/>
+            <Button className='mb-2' onClick={addItem}>Add Item</Button>
+            <h4 className='mb-2 text-xl font-semibold'>Items:</h4>
             <ul>
                 {item.map((item, index) => (
-                   <li key={index}>{item}
-                   <button onClick={() => removeItem(index)}>Delete</button></li>
+                   <li className='grid grid-cols-2 mb-2 justify-between' key={index}>{item}
+                   <Button className='w-20' onClick={() => removeItem(index)}>Delete</Button></li>
                 ))}
             </ul>
         </>
