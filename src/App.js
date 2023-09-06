@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 
 import SideBar from './components/SideBar';
 import UseState from './components/UseState';
-import UseEffect from './UseEffect';
+import UseEffect from './components/UseEffect';
 
 function App() {
   return (
